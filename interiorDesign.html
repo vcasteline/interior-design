@@ -1,92 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styling.css">
+    <script type="text/javascript" src="jsfile.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <style>
-    .hero-image {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("kitchen0.jpg");
-      /*height: 50%;*/
-      background-position: center;
-      background-repeat: no-repeat;
-      margin: 20px;
+  
+    #hero-image::before {
+      background-color: rgba(0, 0, 0, 0.56);
+      content: '';
+      position:absolute;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+      z-index: 1;
     }
-    .hero-text{
-      padding: 10px;
-      text-align: center;
-      top: 50%;
-      left:50%;
-      color: white;
-    }
-    .hero-text button:hover{
-      background-color: lightcyan;
-      color: black;
-    }
-    .logo{
-      display:flex;
-      margin-top: 0px;
-    }
+    
     a{
       text-decoration: none;
     }
     h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Spectral', serif;
       font-weight: 700;
       font-size: 100px;
     }
     body{
       height: 100%;
       margin: 0px, 20px;
-      font-family: 'Chivo', sans-serif;
+      font-family: 'Spectral', serif;
       font-weight: 300;
+      
     }
-    .topnav {
-      background-color: #FFFFFF;
-      overflow: hidden;
-      display: inline;
-    }
-    .topnav a {
-      vertical-align: middle;
-      border-radius: 5px;
-      float: right;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      font-size: 24px;
-      margin: 5px;
-    }
-    .topnav a:hover {
-      background-color: #B0C4DE;
-      color: black;
-    }
-    /* Add a color to the active/current link */
-    .topnav a.active {
-      background-color: #ADD8E6;
-      color: white;
-    }
+  
     p {
-      font-size: 30px;
-      font-family: 'Chivo', sans-serif;
+      font-size: 25px;
+      font-weight: 50;
+      font-family: 'Spectral', serif;
     }
+    .title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 2;
+    }
+    .container{
+      background-color: white;
+    }
+    .navbar{
+      background-color: white;
+    }
+   
   </style>
   <body>
-    <div class="topnav">
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a class="active" href="#home">Home</a>
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
       <div class="logo">
         <img src="logo.jpg" width="100"
          height="100">
+         <span style="font-size:30px;cursor:pointer;float: right;margin: 1em;" id="menu" onclick="openNav()">&#9776; </span>
+      </div>
+      <div class="container">
+        <a class="active" href="interiorDesign.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="aboutMe.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+    </nav> -->
+    <div class="topnav">
+      <a href="contact.html">Contact</a>
+      <a href="aboutMe.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a class="active" href="interiorDesign.html">Home</a>
+      <div class="logo">
+        <img src="logo.jpg" width="100"
+         height="100">
+         <span style="font-size:30px;cursor:pointer;float: right;margin: 1em;" id="menu" onclick="openNav()">&#9776; </span>
       </div>
     </div>
-    <div class="hero-image">
-      <div class="hero-text">
-        <h1>Mafer Casteline</h1>
-        <p>Interior Designer</p>
-      </div>
+  
+    <div class="carousel-caption d-none d-md-block">
+      <h1>Mafer Casteline</h1>
+      <p>Interior designer from Ecuador, focused on personal spaces such as: bathrooms, closets, kitchen, and offices.</p>
     </div>
+      <div id="carouselExampleControls" class="carousel slide" >
+        <div class="carousel-inner">
+          <div id= "hero-image" class="carousel-item active">
+            <img src="kitchen0.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div id= "hero-image" class="carousel-item">
+            <img src="bathb.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div id= "hero-image" class="carousel-item">
+            <img src="bed.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="interiorDesign.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="aboutMe.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
   </body>
+
 </html>
 
