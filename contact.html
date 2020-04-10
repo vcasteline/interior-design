@@ -12,7 +12,8 @@
   
     body{
       height: 100%;
-      margin: 0px, 20px;
+      width: 100%;
+      margin: 0px;
       font-family: 'Spectral', serif;
       font-weight: 300;
     }
@@ -22,13 +23,14 @@
       font-family: 'Spectral', serif;
     }
     .contact{
-        margin: 30px;
+        /* margin: 30px; */
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    
   </style>
-  <body>
+  <body class="container-fluid">
     <div class="topnav">
       <a class="active" href="contact.html">Contact</a>
       <a href="aboutMe.html">About</a>
@@ -47,15 +49,15 @@
       <a href="aboutMe.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="contact">
+    <div class="contact container p-0" >
         <div>
             <h1>Contact</h1>
             <div>
-                <input placeholder="Name" size="51"></input>
+                <input placeholder="Name" ></input>
                 <div>
-                    <input type="text" size="51" placeholder="E-mail">
+                    <input type="text" placeholder="E-mail">
                 </div>
-                <textarea id="message" placeholder="Message"rows="4" cols="50"></textarea>
+                <textarea id="message" placeholder="Message"></textarea>
             
             </div>
 
